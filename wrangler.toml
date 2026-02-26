@@ -10,4 +10,4 @@ JWT_SECRET = "dev-secret-change-in-production"
 [[d1_databases]]
 binding = "DB"
 database_name = "cloudrealty-crm-db"
-database_id = "placeholder-will-be-updated-after-creation"
+database_id = "b864af26-b2c4-4906-b035-24f929a91e9a"
