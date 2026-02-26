@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #334155 transparent;
+  }
+
+  ::selection {
+    background: rgba(14, 165, 233, 0.3);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-500 hover:bg-brand-600 text-white font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-gray-100 font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2;
+  }
+
+  .btn-ghost {
+    @apply hover:bg-gray-700/50 text-gray-300 font-medium px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-2;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-2;
+  }
+
+  .input-field {
+    @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors;
+  }
+
+  .card {
+    @apply bg-gray-800/50 border border-gray-700/50 rounded-xl;
+  }
+
+  .table-header {
+    @apply text-xs font-medium text-gray-400 uppercase tracking-wider;
+  }
+}
+
+/* Kanban drag */
+.deal-card-dragging {
+  opacity: 0.5;
+}
+
+/* Toast animation */
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.toast-enter {
+  animation: slide-in 0.3s ease-out;
+}

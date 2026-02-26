@@ -1,0 +1,8 @@
+name = "cloudrealty-crm"
+compatibility_date = "2024-09-25"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudrealty-crm-db"
+database_id = "placeholder-will-be-updated-after-creation"
