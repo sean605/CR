@@ -1,6 +1,11 @@
 name = "cloudrealty-crm"
 compatibility_date = "2024-09-25"
+main = "functions/_worker.ts"
 pages_build_output_dir = "dist"
+assets = { directory = "dist" }
+
+[vars]
+JWT_SECRET = "dev-secret-change-in-production"
 
 [[d1_databases]]
 binding = "DB"

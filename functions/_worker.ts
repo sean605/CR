@@ -30,6 +30,7 @@ app.onError((err, c) => {
 
 // Public routes
 app.route('/api/auth', authRoutes);
+app.get('/api/health', (c) => c.json({ status: 'ok' }));
 
 // Protected routes
 app.use('/api/*', authMiddleware);
@@ -42,8 +43,5 @@ app.route('/api/team', teamRoutes);
 app.route('/api/analytics', analyticsRoutes);
 app.route('/api/email', emailRoutes);
 app.route('/api/automations', automationRoutes);
-
-// Health check
-app.get('/api/health', (c) => c.json({ status: 'ok' }));
 
 export default app;
